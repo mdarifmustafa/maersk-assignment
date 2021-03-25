@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+}
+
+body > * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.labels {
+  text-align: center;
+}
+.labels.header {
+  padding: 10px 0;
+}
+.labels.footer {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.responsive-view {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+}
+
+#navigation {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#navigation button {
+  margin: 0 4px;
+  border: none;
+  padding: 8px 15px;
+  color: #ffffff;
+  background-color: #72c3dc;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0px 8px 3px -5px #2f454e;
+}
+
+#numbers-pad {
+  display: flex;
+  position: relative;
+}
+
+.number {
+  padding: 10px;
+  position: relative;
+  display: flex;
+}
+.numberbg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.number span {
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+.number-1 .numberbg {
+  background-color: #6f98a8;
+}
+.number-2 .numberbg {
+  background-color: #2b8ead;
+}
+.number-3 .numberbg {
+  background-color: #2f454e;
+}
+.number-4 .numberbg {
+  background-color: #2b8ead;
+}
+.number-5 .numberbg {
+  background-color: #2f454e;
+}
+.number-6 .numberbg {
+  background-color: #bfbfbf;
+}
+.number-7 .numberbg {
+  background-color: #bfbfbf;
+}
+.number-8 .numberbg {
+  background-color: #6f98a8;
+}
+.number-9 .numberbg {
+  background-color: #2f454e;
+}
+
+/* // for mobile screen */
+@media screen and (max-width: 575px) {
+  .labels.header {
+    color: #ffffff;
+    background-color: #000000;
+  }
+  #numbers-pad {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .number {
+    width: 90%;
+    height: 20px !important;
+    margin: 5px auto;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+  }
+  .number span {
+    color: #000;
+  }
+  .numberbg {
+    width: 10px;
+    height: 100%;
+  }
+}
+
+/* // for desktop screen */
+@media screen and (min-width: 576px) {
+  .labels.header {
+    margin-top: 5px;
+  }
+  .responsive-view {
+    flex-direction: row;
+  }
+  #navigation {
+    flex-flow: column;
+    position: absolute;
+    right: 0;
+    width: 30%;
+  }
+  #navigation button {
+    margin: 8px auto;
+    width: 100px;
+  }
+  #numbers-pad {
+    width: 70%;
+    flex-wrap: wrap;
+  }
+  .number {
+    padding: 0;
+    width: 33.33%;
+    align-items: center;
+  }
+  .numberbg {
+    width: 100%;
+    height: 100%;
+  }
+}
